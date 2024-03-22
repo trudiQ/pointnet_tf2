@@ -1,4 +1,4 @@
-name: pointnet_cpu
+name: pointnet_cpu2
 dependencies:
     - python==3.6.2
     - numpy==1.17.3
@@ -11,3 +11,5 @@ dependencies:
         - tensorflow==2.0.0
         - gdown==3.8.3
         - wandb==0.8.15
+        - gql==0.2.0
+        - PyYAML=6.0.1

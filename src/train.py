@@ -22,10 +22,10 @@ tf.random.set_seed(0)
 
 # CLI
 PARSER = argparse.ArgumentParser(description='CLI for training pipeline')
-PARSER.add_argument('--batch_size', type=int, default=32, help='Batch size per step')
+PARSER.add_argument('--batch_size', type=int, default=1200, help='Batch size per step') # 32
 PARSER.add_argument('--epochs', type=int, default=200, help='Number of epochs')
 PARSER.add_argument('--learning_rate', type=float, default=1e-3, help='Initial learning rate')
-PARSER.add_argument('--wandb', action='store_true', default=False, help='Whether to use wandb')
+PARSER.add_argument('--wandb', action='store_true', default=True, help='Whether to use wandb')
 ARGS = PARSER.parse_args()
 
 BATCH_SIZE = ARGS.batch_size
