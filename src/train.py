@@ -1,10 +1,11 @@
-""" Experiments at https://app.wandb.ai/lrg/pointnet_own """
+""" Experiments at https://app.wandb.ai/trudiq/pointnet_own """
 import argparse
 from glob import glob
 from time import time
 from datetime import timezone, datetime
 
 import tensorflow as tf
+print(f"Tensorflow version: {tf.__version__}")
 
 from model import get_model
 from losses import anchor_loss
@@ -22,7 +23,7 @@ tf.random.set_seed(0)
 
 # CLI
 PARSER = argparse.ArgumentParser(description='CLI for training pipeline')
-PARSER.add_argument('--batch_size', type=int, default=1200, help='Batch size per step') # 32
+PARSER.add_argument('--batch_size', type=int, default=32, help='Batch size per step')
 PARSER.add_argument('--epochs', type=int, default=200, help='Number of epochs')
 PARSER.add_argument('--learning_rate', type=float, default=1e-3, help='Initial learning rate')
 PARSER.add_argument('--wandb', action='store_true', default=True, help='Whether to use wandb')

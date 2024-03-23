@@ -1,4 +1,8 @@
-name: pointnet_cpu2
+name: pointnet_gpu
+channels:
+  - anaconda
+  - conda-forge
+  - defaults
 dependencies:
     - python==3.6.2
     - numpy==1.17.3
@@ -6,9 +10,11 @@ dependencies:
     - scikit-learn==0.21.2
     - pylint==2.4.3
     - seaborn==0.9.0
+    - cudatoolkit=11.2
+    - cudnn=8.1.0
     - pip==19.3.1
     - pip:
-        - tensorflow==2.0.0
+        - tensorflow-gpu==2.5.0
         - gdown==3.8.3
         - wandb==0.8.15
         - gql==0.2.0

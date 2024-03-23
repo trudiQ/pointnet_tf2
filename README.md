@@ -36,6 +36,11 @@ The architecture is surprisingly simple and quite intuitive. The classification 
 ## Training
 With ModelNet40 located in the project root directory, training can be launched by running `python3 src/train.py`. Optional command-line arguments include batch size, number of epochs, initial learning rate, and whether to use [wandb](https://www.wandb.com/) to monitor training.
 
+To use wandb:
+- Create an new account and log in your account on the browser
+- In command window, type 'wandb login', then follow the steps
+- Ensure enable 'wandb' when executing training
+
 Training consisted of experimenting with constant vs exponential decay learning rate schedules, learning rate and batch norm momentum warm-up, and anchor loss [3]. Interestingly, anchor loss did not improve performance, suggesting that objects in the dataset are generally dissimilar from one another. Data augmentation consists of rotating point cloud samples along the vertical axis and adding Gaussian noise to each point comprising the point cloud.
 
 Experiments can be found [here](https://app.wandb.ai/lrg/pointnet_own). The final validation metrics are indicative of underfitting, suggesting that it may be worthwhile to increase the model complexity.
